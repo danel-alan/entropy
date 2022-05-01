@@ -35,10 +35,10 @@ func (er *EntropyReporter) Report(r io.Reader, size uint64) (*EntropyReport, err
 	entropies := entropy.ShannonAllBatch(blocks)
 	var summary EntropySummary
 	for _, entropy := range entropies {
-		if entropy >= er.HighEntropy {
+		if entropy > er.HighEntropy {
 			summary.HighEntropyBlocks++
 		}
-		if entropy <= er.LowEntropy {
+		if entropy < er.LowEntropy {
 			summary.LowEntropyBlocks++
 		}
 	}
