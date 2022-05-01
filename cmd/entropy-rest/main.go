@@ -20,7 +20,7 @@ var (
 )
 
 func usage() {
-	fmt.Fprintf(os.Stderr, "usage: entropy-server [flags]\n")
+	fmt.Fprintf(os.Stderr, "usage: entropy-rest [flags]\n")
 	flag.PrintDefaults()
 }
 

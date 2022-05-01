@@ -19,7 +19,7 @@ var (
 )
 
 func usage() {
-	fmt.Fprintf(os.Stderr, "usage: entropy-front [flags]\n")
+	fmt.Fprintf(os.Stderr, "usage: entropy-html [flags]\n")
 	flag.PrintDefaults()
 }
 
