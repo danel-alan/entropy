@@ -16,7 +16,7 @@ func Shannon(s []byte) float64 {
 		f := float64(count) / float64(len(s))
 		entropy += -f * math.Log2(f)
 	}
-	return entropy
+	return math.Round(entropy*100)/100
 }
 
 // ShannonAll returns a slice of entropies from of a matrix of bytes using the Shannon formula.
